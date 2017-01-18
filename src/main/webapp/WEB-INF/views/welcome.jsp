@@ -46,6 +46,7 @@
                         <br/>
                     </c:if>
                     <form action="${context}/tudu/login" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         <c:if test="${authentication eq 'failure'}">
                             <div class="error"><fmt:message key="authentication.failure"/></div>
                         </c:if>
